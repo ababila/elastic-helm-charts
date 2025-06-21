@@ -38,7 +38,7 @@ hostAliases: []
 #  - "bar.local"
 
 image: "docker.elastic.co/kibana/kibana"
-imageTag: "8.5.1"
+imageTag: "8.18.2"
 imagePullPolicy: "IfNotPresent"
 
 # additionals labels
@@ -173,3 +173,6 @@ lifecycle: {}
 # postStart:
 #   exec:
 #     command: ["/bin/sh", "-c", "echo Hello from the postStart handler > /usr/share/message"]
+
+# WA: to use /node/glibc-217/bin/node path for arm64 platform in pre-install and post-delete jobsplatform: amd64 # or "arm64"
+nodeBinaryRelativePath: /node/bin/node
